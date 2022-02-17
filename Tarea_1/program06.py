@@ -1,13 +1,15 @@
+# -*- coding: utf-8 -*-
 '''
 Fecha de creación: 17/02/2022
 autor: PakoMtz 
 
 ---------------------------------------------
-Problema: Descomponer un numero en unidades, decenas, centenas, ...
+Problema: Descomponer un numero en suma de 
+unidades, decenas, centenas, ...
 ---------------------------------------------
 '''
 
-def descomponer(num):
+def descomponer(num:int):
     num = str(num)
     factores = []
 
