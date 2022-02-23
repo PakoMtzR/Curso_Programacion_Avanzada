@@ -11,13 +11,14 @@ mostrar es: Suma = 1 + 5 + 2 + 1 = 9
 ------------------------------------------------
 '''
 
-def suma_digitos(num):
+def suma_digitos(num:int):
     num = str(num)
     digitos = []
     suma = 0
-    for i in range(len(num)):
-        suma = suma + int(num[i])
-        digitos.append(num[i])
+
+    for i in num:
+        suma = suma + int(i)
+        digitos.append(i)
     
     print(suma)
     print(digitos)

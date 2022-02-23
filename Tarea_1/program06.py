@@ -13,8 +13,12 @@ def descomponer(num:int):
     num = str(num)
     factores = []
 
+    '''
     for i in range(len(num)):
         factores.append(int(num[i])*(10**(len(num)-(i+1))))
+    '''
+    for i, value in enumerate(num):
+        factores.append(int(value)*(10**(len(num)-(i+1))))
 
     print(factores)
 

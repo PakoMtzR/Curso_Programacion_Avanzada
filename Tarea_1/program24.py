@@ -22,12 +22,19 @@ La
 ---------------------------------------------------------------
 '''
 
+# hay que mejorarla
 def otra_funcion_rara(cadena:str):
     lista = cadena.split(' ')
     for i in range(len(lista)):
         for j in range(len(lista)-i):
             print(lista[j], end=' ')
         print('\n')
+
+'''
+def otra_funcion_rara(cadena:str):
+    lista = cadena.split(' ')
+    for i, value in enumerate(lista):
+'''
     
 
 otra_funcion_rara('La frase que se ingreso tiene menos de cien caracteres')

@@ -12,4 +12,4 @@ def imprimir_tabla(num:int):
     for i in range(10):
         print(f'{i+1} * {num} = {(i+1)*num}')
 
-imprimir_tabla(8)
+imprimir_tabla(7)

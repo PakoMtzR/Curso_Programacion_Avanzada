@@ -14,8 +14,9 @@ Fuente: https://mathworld.wolfram.com/NarcissisticNumber.html
 def narcisistas(num:int):
     num = str(num)
     aux = 0
-    for i in range(len(num)):
-        aux = aux + (int(num[i]) ** 3)
+    
+    for i in num:
+        aux = aux + (int(i) ** 3)
     
     if num == str(aux):
         return True
