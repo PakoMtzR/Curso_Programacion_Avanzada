@@ -16,13 +16,13 @@ muestre en pantalla un triángulo como el siguiente (número ingresado 5):
 ------------------------------------------------------------------------
 '''
 
-def triangulo_raro_de_impares(num:int):
+def triangulo_raro_de_impares(num:int) -> None:
     
     # Generamos una lista de impares para poder rellenar el triangulo
     impares = []
     i = 0
     while len(impares) < num:
-        i = i + 1
+        i += 1
         if i % 2 != 0:
             impares.append(i)
     

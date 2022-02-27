@@ -14,19 +14,27 @@ estándar de los datos.
 ----------------------------------------------------------
 '''
 
-def porqueria():
+# No esta completo
+
+def ingreso_de_datos() -> None:
+
     continuar = True
-    lista = []
-    while continuar:
+    datos = []
+    
+    while continuar == True:
         num = int(input('ingresa un numero: '))
-        lista.append(num)
+        datos.append(num)
+
         opcion = input('deseas agregar otro numero? [y/n]: ').lower()
+        
         if opcion == 'y':
             pass
-        else:
+        elif opcion == 'n':
             continuar = False
-    
-    print(lista)
+        else:
+            opcion = input('deseas agregar otro numero? [y/n]: ').lower()
+            
+    print(datos)
 
 
-porqueria()
+ingreso_de_datos()

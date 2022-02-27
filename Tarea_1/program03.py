@@ -13,7 +13,7 @@ no fue bisiesto, pero el año 2000 si lo es.
 -----------------------------------------------------
 '''
 
-def bisiesto(year:int):
+def bisiesto(year:int) -> bool:
     if year % 4 == 0:
         if year % 100 == 0:
             if year % 400 == 0:

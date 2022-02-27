@@ -8,7 +8,7 @@ Problema: imprimir tablas de multiplicar
 ---------------------------------------------
 '''
 
-def imprimir_tabla(num:int):
+def imprimir_tabla(num:int) -> None:
     for i in range(10):
         print(f'{i+1} * {num} = {(i+1)*num}')
 

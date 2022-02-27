@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Fecha de creación: 17/02/2022
+Fecha de creación: 27/02/2022
 autor: PakoMtz 
 
 ---------------------------------------------
@@ -9,16 +9,13 @@ unidades, decenas, centenas, ...
 ---------------------------------------------
 '''
 
-def descomponer(num:int):
-    num = str(num)
+def descomponer(num:int) -> None:
+    
+    num_str = str(num)
     factores = []
 
-    '''
-    for i in range(len(num)):
-        factores.append(int(num[i])*(10**(len(num)-(i+1))))
-    '''
-    for i, value in enumerate(num):
-        factores.append(int(value)*(10**(len(num)-(i+1))))
+    for i, value in enumerate(num_str):
+        factores.append(int(value)*(10**(len(num_str)-(i+1))))
 
     print(factores)
 

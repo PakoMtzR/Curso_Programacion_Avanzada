@@ -11,6 +11,7 @@ incluyendo a & b
 ----------------------------------------------------------
 '''
 
+# No esta completo
 def suma_intermedios(num_a:int, num_b:int) -> None:
     suma = 0
 

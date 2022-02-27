@@ -22,12 +22,14 @@ La
 ---------------------------------------------------------------
 '''
 
-# hay que mejorarla
-def otra_funcion_rara(cadena:str):
-    lista = cadena.split(' ')
-    for i in range(len(lista)):
-        for j in range(len(lista)-i):
-            print(lista[j], end=' ')
+# Hay que mejorarla porque da mucho cringe
+def otra_funcion_rara(frase:str) -> None:
+
+    frase_sin_espacios = frase.split(' ')   # Quitamos todos los espacios que tenga la frase
+    
+    for i in range(len(frase_sin_espacios)):
+        for j in range(len(frase_sin_espacios)-i):
+            print(frase_sin_espacios[j], end=' ')
         print('\n')
 
 '''

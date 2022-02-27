@@ -11,16 +11,9 @@ el programa debe mostrar 3425
 ---------------------------------------------
 '''
 
-def invertir(num:int):
-    num = str(num)[::-1]
-    print(num)
+def invertir(num:int) -> None:
+    num_str = str(num)[::-1] # Convertimos el número en un string y lo invertimos
+    print(num_str)
+    print(type(num_str))
 
 invertir(81285)
-
-
-'''
-    aux = ''
-    for i in range(len(num)):
-        aux = aux + num[-1-i]
-    num = aux
-'''

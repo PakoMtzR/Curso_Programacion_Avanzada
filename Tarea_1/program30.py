@@ -9,6 +9,7 @@ una lista de entre 2 y 6 números enteros y mostrar todas las
 posibles permutaciones de la lista
 ----------------------------------------------------------
 '''
+# No esta completo
 
 def permutaciones():
     numeros = [5, 2, 4, 6]

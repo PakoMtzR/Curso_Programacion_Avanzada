@@ -7,7 +7,10 @@ autor: PakoMtz
 Problema: Evaluar si un numero es par o impar
 ---------------------------------------------
 '''
-def evaluar_par(num:int):
+
+def evaluar_par(num:int) -> bool:
+    
+    # Si el número a evaluar es divisible por 2 entonces es par
     if num % 2 == 0:
         return True
     else:

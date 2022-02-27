@@ -11,10 +11,16 @@ la original y la resultante
 -------------------------------------------------------------
 '''
 
-def cosa_rara():
+def cosa_rara() -> None:
+
     abecedario = 'abcdefghijklmnopqrstuvwxyz'
+
+    # Guardamos una copia del abecedario excluyendo los valores que ocupen las posiciones múltiplos de 3
     abecedario_copia = [val for i, val in enumerate(abecedario) if (i+1)%3 != 0]
+    
+    # Guardamos el abecedario original como una lista
     abecedario = list(abecedario)
+    
     print(abecedario)
     print(abecedario_copia)
 

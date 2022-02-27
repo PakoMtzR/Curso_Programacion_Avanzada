@@ -11,14 +11,17 @@ Fuente: https://mathworld.wolfram.com/NarcissisticNumber.html
 ---------------------------------------------------------------
 '''
 
-def narcisistas(num:int):
-    num = str(num)
-    aux = 0
+def narcisistas(num:int) -> bool:
     
-    for i in num:
-        aux = aux + (int(i) ** 3)
+    num_str = str(num)
+    suma_de_cubos = 0
     
-    if num == str(aux):
+    # Un número es narcisista cuando la suma de los cubos de cada uno de los digitos es igual al mismo numero.
+    # Ejemplo: 407 = 4^3 + 0^3 + 7^3
+    for i in num_str:
+        suma_de_cubos += (int(i) ** 3)
+    
+    if num == suma_de_cubos:
         return True
     else:
         return False
