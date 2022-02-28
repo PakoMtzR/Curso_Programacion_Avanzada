@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Fecha de creación: 22/02/2022
+Fecha de creación: 27/02/2022
 autor: PakoMtz 
 
 ----------------------------------------------------------
@@ -9,11 +9,16 @@ una lista de entre 2 y 6 números enteros y mostrar todas las
 posibles permutaciones de la lista
 ----------------------------------------------------------
 '''
-# No esta completo
 
-def permutaciones():
-    numeros = [5, 2, 4, 6]
+from itertools import permutations
 
-    nueva = []
-    for i, value in enumerate(numeros):
-        nueva.append(value)
+def posibles_permutaciones(lista_de_datos:list) -> None:
+    permutaciones = list(permutations(lista_de_datos))
+
+    print(f'Posibles permutaciones -> {len(permutaciones)}')
+    for permutacion in permutaciones:
+        print(permutacion)
+
+colores = ['rojo', 'azul', 'verde']
+numeros = [0, 8, 9, 1]
+posibles_permutaciones(numeros)

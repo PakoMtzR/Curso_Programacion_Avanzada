@@ -88,17 +88,17 @@
 23. Generar un programa que permita ingresar una frase y también solicite la forma de ordenarla, alfabéticamente directa o inversa.
 <br>
 
-24. Desarrollar un programa que permita ingresar una frase solo texto y espacios de no más de 100 caracteres y que imprima la frase en cada línea eliminando los espacios, de la siguiente forma:
-    La frase que se ingreso tiene menos de cien caracteres
-    La frase que se ingreso tiene menos de cien
-    La frase que se ingreso tiene menos de
-    La frase que se ingreso tiene menos
-    La frase que se ingreso tiene
-    La frase que se ingreso
-    La frase que se
-    La frase que
-    La frase
-    La
+24. Desarrollar un programa que permita ingresar una frase solo texto y espacios de no más de 100 caracteres y que imprima la frase en cada línea eliminando los espacios, de la siguiente forma:<br>
+    La frase que se ingreso tiene menos de cien caracteres<br>
+    La frase que se ingreso tiene menos de cien<br>
+    La frase que se ingreso tiene menos de<br>
+    La frase que se ingreso tiene menos<br>
+    La frase que se ingreso tiene<br>
+    La frase que se ingreso<br>
+    La frase que se<br>
+    La frase que<br>
+    La frase<br>
+    La<br>
 <br>
 
 25. Desarrollar un programa que permita ingresar cualquier tipo de texto y que cuente la frecuencia de aparición de cada letra del alfabeto latino, esto el número de cuántas a, b, c, d, ... hay en el texto ingresado.

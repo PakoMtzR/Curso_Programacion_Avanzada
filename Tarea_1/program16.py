@@ -11,7 +11,7 @@ Fuente: https://mathworld.wolfram.com/NarcissisticNumber.html
 ---------------------------------------------------------------
 '''
 
-def narcisistas(num:int) -> bool:
+def verificar_si_es_narcisista(num:int) -> bool:
     
     num_str = str(num)
     suma_de_cubos = 0
@@ -26,4 +26,4 @@ def narcisistas(num:int) -> bool:
     else:
         return False
     
-print(narcisistas(153))
+print(verificar_si_es_narcisista(153))

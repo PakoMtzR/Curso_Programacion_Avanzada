@@ -12,7 +12,7 @@ números romanos.
 
 def convertir_a_romano(num:int) -> str:
 
-    # Definomos los numeros con sus respectivos numerales romanos
+    # Definimos los numeros con sus respectivos numerales romanos
     numeros = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
     numerales = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
 
@@ -30,4 +30,4 @@ def convertir_a_romano(num:int) -> str:
     return numeral_romano
 
 
-print(convertir_a_romano(123)) # 'CXXIII'
+print(convertir_a_romano(10)) # 'CXXIII'

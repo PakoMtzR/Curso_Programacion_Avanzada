@@ -11,7 +11,7 @@ Fuente: https://mathworld.wolfram.com/KeithNumber.html
 ---------------------------------------------------------------
 '''
 
-def validar_numero_keith(num:int) -> bool:
+def verificar_si_es_numero_keith(num:int) -> bool:
 
     # Guardamos los digitos del número en un a lista
     digitos = [int(i) for i in str(num)]
@@ -39,4 +39,4 @@ def validar_numero_keith(num:int) -> bool:
         return False
     
 
-print(validar_numero_keith(197))
+print(verificar_si_es_numero_keith(197))

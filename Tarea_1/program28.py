@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Fecha de creación: 22/02/2022
+Fecha de creación: 27/02/2022
 autor: PakoMtz 
 
 ----------------------------------------------------------
@@ -14,27 +14,34 @@ estándar de los datos.
 ----------------------------------------------------------
 '''
 
-# No esta completo
 
-def ingreso_de_datos() -> None:
-
-    continuar = True
-    datos = []
+# Esta función recibe una lista de datos y con base a ella, determina:
+# 1) La cantidad de datos ingresados
+# 2) El promedio
+# 3) La desviacion estandar
+def analisis_de_datos(lista_de_datos:list) -> None:
     
-    while continuar == True:
-        num = int(input('ingresa un numero: '))
-        datos.append(num)
+    numero_de_datos = len(lista_de_datos)    # Determina la cantidad de datos ingresados
+    
+    # Calculamos el promedio
+    suma_de_datos = 0
+    for dato in lista_de_datos:
+        suma_de_datos += dato
+    
+    promedio = suma_de_datos / numero_de_datos
 
-        opcion = input('deseas agregar otro numero? [y/n]: ').lower()
-        
-        if opcion == 'y':
-            pass
-        elif opcion == 'n':
-            continuar = False
-        else:
-            opcion = input('deseas agregar otro numero? [y/n]: ').lower()
-            
-    print(datos)
+    # Calculamos la desviacion estandar
+    suma_desviaciones = 0
+    for dato in lista_de_datos:
+        suma_desviaciones += (dato - promedio)**2
+    
+    desviacion_estandar = round((suma_desviaciones / (numero_de_datos - 1)) ** 0.5, 3)
+
+    # Imprimimos los calculos obtenidos
+    print(lista_de_datos)
+    print(f' Datos ingresados -> {numero_de_datos}')
+    print(f' Promedio = {promedio}')
+    print(f' Desviacion estandar = {desviacion_estandar}')
 
 
-ingreso_de_datos()
+analisis_de_datos([5,15,12,18,28])

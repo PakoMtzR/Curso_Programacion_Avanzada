@@ -22,7 +22,7 @@ La
 ---------------------------------------------------------------
 '''
 
-# Hay que mejorarla porque da mucho cringe
+# Hay que mejorarla porque mal documentado
 def otra_funcion_rara(frase:str) -> None:
 
     frase_sin_espacios = frase.split(' ')   # Quitamos todos los espacios que tenga la frase

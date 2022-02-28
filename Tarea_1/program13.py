@@ -18,16 +18,20 @@ def serie_padovan(num:int) -> list:
     # Ejemplo: num = 1 --> [1], num = 2 --> [1, 1], , num = 3 --> [1, 1, 1]
     if num <= 3:
         for i in range(3-num):
-            padovan.pop(i)
+            padovan.pop()   # Elimina el ultimo elemeto de la lista
     
     # Si nos solicitan más elementos de la serie, los generamos y agregamos a la lista.
+    # Los demas elementos de la serie de Padovan se generan con la siguiente formula:
+    # Pn = Pn-2 + Pn-3, para n >= 3
     else:
-        for i in range(num-3):
-            padovan.append(padovan[i] + padovan[i+1])
-
+        for i in range(3, num):
+            padovan.append(padovan[i-2] + padovan[i-3])
+        
     return padovan
 
 
 elementos = []
-elementos = serie_padovan(15)
-print(elementos)
+for i in range(10):
+    elementos = serie_padovan(i)
+    print(elementos)
+

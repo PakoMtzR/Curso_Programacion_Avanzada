@@ -11,9 +11,9 @@ el programa debe mostrar 3425
 ---------------------------------------------
 '''
 
-def invertir(num:int) -> None:
+def invertir_numero(num:int) -> None:
     num_str = str(num)[::-1] # Convertimos el número en un string y lo invertimos
     print(num_str)
     print(type(num_str))
 
-invertir(81285)
+invertir_numero(81285)
