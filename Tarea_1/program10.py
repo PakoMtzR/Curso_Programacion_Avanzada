@@ -11,8 +11,14 @@ fuente: https://es.wikipedia.org/wiki/Doble_factorial
 ------------------------------------------------------
 '''
 
-def doble_factorial(num:int) -> int:
+from os import system
+import preguntar
+
+
+def calcular_doble_factorial(num:int) -> int:
     
+    #if num < 0: num *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
+
     dobleFactorial = 1
     
     # La formula del doble factorial de un número par es diferente que al de un número impar (consulte el link)
@@ -26,7 +32,33 @@ def doble_factorial(num:int) -> int:
     return dobleFactorial
 
 
-print(doble_factorial(9))
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('--------------------------------------------------')
+        print(' Programa 10: Calcular el doble factorial (n!!) ')
+        print('--------------------------------------------------\n')
+        numero = int(input(' Ingrese un número: '))
+        print('\n')
+
+        doble_factorial = calcular_doble_factorial(numero)
+
+        print(f'\t {str(numero)}!! = {doble_factorial}')
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un número entero!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo()
+#print(doble_factorial(9))
 '''
 ejemplos:
 9!! = 945

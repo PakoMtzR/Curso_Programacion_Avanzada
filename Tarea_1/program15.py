@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Fecha de creación: 27/02/2022
+Fecha de creación: 28/02/2022
 autor: PakoMtz 
 
 ---------------------------------------------------------------
@@ -10,40 +10,69 @@ positivos. (Existe un algoritmo ya establecido para este caso,
 se le conoce como algoritmo de Euclídes).
 ---------------------------------------------------------------
 '''
+from os import system
+import preguntar
 
-# Falta mejorar unos detalles
-def obtener_mcm_y_mcd(numA:int, numB:int) -> None:
+
+def mcd(a:int, b:int) -> int:
     
-    residuo = 1
+    # Casos Triviales
+    if a == 0 or b == 0:
+        return 0
 
-    # Verificamos casos triviales
-    if ((numA == 0) & (numB == 0)):
-        mcd = 0
-    elif numA == 0:
-        mcd = numB
-    elif numB == 0:
-        mcd = numA
+    # Buscamos que 'a' siempre sea mayor que 'b'
+    if a <= b:
+        a, b = b, a
     
-    # Caso no trivial
-    else:
-        # Buscamos que numA > numB
-        if numA < numB:
-            numA, numB = numB, numA     
-        
-        # Creamos unas copias de los números
-        numA_copia = numA
-        numB_copia = numB
+    # Seguimos el algoritmo de Euclides hasta que el residuo sea 0
+    residuo = a % b
+    while residuo != 0:
+        a, b = b, residuo
+        residuo = a % b
+    
+    return b
 
-        # Calculamos el mcd
-        while residuo != 0:
-            residuo = numA_copia % numB_copia
-            mcd, numA_copia, numB_copia = numB_copia, numB_copia, residuo
-        
-    # Calculamos el mcm
-    mcm = (numA * numB)//mcd
-
-    print(f'mcm = {mcm} \nmcd = {mcd}')
+def mcm(a:int, b:int) -> int:
+    if a == 0 or b == 0:
+        return 0
+    else: 
+        return (a*b)//mcd(a,b)
 
 
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
 
-obtener_mcm_y_mcd(0,0)
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------------')
+        print(' Programa 15: Obtener el MCM y MCD de un par de números (a,b)')
+        print('----------------------------------------------------------------\n')
+        num_a = int(input(' Ingrese el valor de a: '))
+        num_b = int(input(' Ingrese el valor de b: '))
+        print('\n')
+
+        minimo_comun_multiplo = mcm(num_a, num_b)
+        maximo_comun_divisor = mcd(num_a, num_b)
+
+        print(f'\t mcm = {minimo_comun_multiplo}\n\t mcd = {maximo_comun_divisor}')
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un numero entero positivo!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo()
+
+
+'''
+a = 1032
+b = 180
+
+print(mcd(a,b))
+print(mcm(a,b)) 
+'''

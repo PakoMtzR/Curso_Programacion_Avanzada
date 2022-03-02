@@ -15,63 +15,76 @@ Fuente:
 http://www.grupoalquerque.es/mate_cerca/paneles_2017/286_Criba_de_Sundaram.pdf
 ---------------------------------------------------------------------
 '''
+from os import system
+import preguntar
+
+
+# Criba de Sundaram
+# i, j E Naturales
+# 1 <= i <= j
+# i + j + 2ij <= lim
 def criba_sundaram(lim:int) -> list:
-
-    # Creamos una lista de números que se encuentran en el intervalo [1, lim]
-    numeros = [num for num in range(1, lim + 1)]
-    numeros_primos = []
-    #print(numeros)
-    i = 1
-    j = 1
-    tolerancia = 2
+	
+    # Creamos una lista de números naturales que se encuentran en el intervalo de 1 al limite dado [1, lim]
+    lista_numeros = [num for num in range(1, lim + 1)]
     
-    while True:
+    # Creamos una lista donde guardaremos los numeros primos
+    numeros_primos = []
+    
+    # Condiciones Iniciales
+    i = 1; j = 1
 
-        numero_a_quitar = i + j + (2*i*j)
-        
-        if numero_a_quitar in numeros:
-            numeros.remove(numero_a_quitar)
-            #print(numeros)
-            j += 1
-            #tolerancia += 1
+    # Generamos la base para generar numeros primos (eliminamos candidatos no posibles)
+    for i in range(1, (lim-j)//(1+2*j)):
+        for j in range(1, (lim-i)//(1+2*i)):
+            numero_a_eliminar = i + j + (2*i*j)
+            if numero_a_eliminar in lista_numeros:
+                lista_numeros.remove(numero_a_eliminar)
+        j = i + 1
 
-        else:
-            tolerancia -= 1
-                   
-            if tolerancia == 0:
-                break
-            else:
-                i += 1
-                j = i  
-
-    for i in numeros:
+    # Generacion de numeros primos
+    # 2n + 1 --> Donde n es un elemento en la Lista Base de Numeros Primos
+    # Si el resultado es menor al limite dado, lo guardamos en la lista de numeros primos
+    for i in lista_numeros:
         numero_primo = (2*i) + 1
         if numero_primo <= lim:
             numeros_primos.append(numero_primo)
-
+    
     return numeros_primos
 
 
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------------')
+        print(' Programa 22: Obtener los números primos con el uso de la')
+        print('              Criba de Sundaram')
+        print('----------------------------------------------------------------\n')
+        limite = int(input(' Obtener número primos inferiores a: '))
+        print('\n')
+
+        primos = criba_sundaram(limite)
+        print(f' Existen {len(primos)} numeros primos entre 3 y {limite}:\n\t')
+        for i in primos:
+            print(f' {str(i)}', end='')
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un numero entero positivo!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo()
+
+'''
 n = int(input(' Ingrese el limite: '))
 x = criba_sundaram(n)
 print(f' Existen {len(x)} numeros primos entre 3 y {n}')
 print(x)
-
-
-
 '''
-        if numero_a_quitar > lim:
-            #j_lim = j
-            i += 1
-            j = i
-            numero_a_quitar = i + j + (2*i*j)
-            #if j_lim == i:
-            #    break
-            if numero_a_quitar > lim:
-                break
-        else:
-            if numero_a_quitar in numeros:
-                numeros.remove(numero_a_quitar)
-                print(numeros)
-        j += 1
-        '''

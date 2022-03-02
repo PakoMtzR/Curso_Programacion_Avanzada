@@ -10,6 +10,7 @@ múltiplos de 3 y muestre en pantalla ambas listas,
 la original y la resultante 
 -------------------------------------------------------------
 '''
+from os import system
 
 def cosa_rara() -> None:
 
@@ -21,8 +22,20 @@ def cosa_rara() -> None:
     # Guardamos el abecedario original como una lista
     abecedario = list(abecedario)
     
-    print(abecedario)
-    print(abecedario_copia)
+    print(f'    Original --> {abecedario}')
+    print(f'  Resultante --> {abecedario_copia}')
 
+
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+system('cls')   # Limpiamos la consola
+
+print('----------------------------------------------------------')
+print(' Programa 12: Almacenar en una lista las letras del abecedario,') 
+print('              elimine de la lista las letras que ocupen las ')
+print('              posiciones múltiplos de 3 y muestre en pantalla ')
+print('              ambas listas, la original y la resultante')
+print('----------------------------------------------------------\n')
 
 cosa_rara()

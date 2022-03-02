@@ -15,7 +15,11 @@ https://es.wikipedia.org/wiki/N%C3%BAmero_feliz
 ---------------------------------------------------------------
 '''
 
-def verificar_si_es_un_numero_feliz(num:int) -> bool:
+from os import system
+import preguntar
+
+
+def verificar_si_es_un_numero_feliz(num:int) -> None:
     
     # Agregamos el primer número a la lista
     lista_numeros = [num]
@@ -28,6 +32,7 @@ def verificar_si_es_un_numero_feliz(num:int) -> bool:
         
         # Recorremos cada digito del ultimo elemento y sumamos sus cuadrados
         # Ejemplo: 49 --> 4² + 9² = 97 
+        print('\t', end='')
         for i, value in enumerate(num_str):
             
             # Al principio no imprimiremos el simbolo ' + '
@@ -46,10 +51,35 @@ def verificar_si_es_un_numero_feliz(num:int) -> bool:
     # Si al final de todo el proceso el ultimo elemento de la lista de numeros es 1, 
     # entonces es un número feliz.
     if lista_numeros[-1] == 1:
-        return True
+        print(f'\n   {str(num)} es un número feliz')
+        #return True
     else:
-        return False
+        print(f'\n   {str(num)} NO es un número feliz')
+        #return False
 
 
-x = verificar_si_es_un_numero_feliz(7) 
-print(x)
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------')
+        print(' Programa 21: Números Felices')
+        print('----------------------------------------------------------\n')
+        numero = int(input(' Ingrese un número: '))
+        print('\n')
+
+        verificar_si_es_un_numero_feliz(numero)
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un número entero!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo() # True / False
+

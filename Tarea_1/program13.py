@@ -10,7 +10,12 @@ Fuente: https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Padovan
 ---------------------------------------------------------------
 '''
 
+from os import system
+import preguntar
+
+
 def serie_padovan(num:int) -> list:
+    if num < 0: num *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
     
     padovan = [1, 1, 1]
     
@@ -30,8 +35,33 @@ def serie_padovan(num:int) -> list:
     return padovan
 
 
-elementos = []
-for i in range(10):
-    elementos = serie_padovan(i)
-    print(elementos)
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------')
+        print(' Programa 13: Serie de Padovan')
+        print('----------------------------------------------------------\n')
+        numero_de_elementos = int(input(' Ingrese el número de elementos de la serie: '))
+        print('\n')
+
+        # Obtenemos e imprimimos la serie de Padovan
+        elementos = []
+        elementos = serie_padovan(numero_de_elementos)
+        print('\t', end='')
+        for i in elementos:
+            print(f'{str(i)} ', end='')
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un número entero!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo() # True / False
 

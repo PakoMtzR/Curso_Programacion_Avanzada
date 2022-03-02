@@ -12,7 +12,13 @@ https://es.wikipedia.org/wiki/N%C3%BAmero_de_Pell
 --------------------------------------------------------------
 '''
 
+from os import system
+import preguntar
+
+
 def serie_pell(num:int) -> list:
+
+    if num < 0: num *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
     
     pell = [0, 1]
     
@@ -32,7 +38,31 @@ def serie_pell(num:int) -> list:
     return pell
 
 
-elementos = []
-for i in range(7):
-    elementos = serie_pell(i)
-    print(elementos)
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------')
+        print(' Programa 19: Serie de Pell')
+        print('----------------------------------------------------------\n')
+        numero_de_elementos = int(input(' Ingrese el número de elementos de la serie: '))
+        print('\n')
+
+        pell = []
+        pell = serie_pell(numero_de_elementos)
+        print('\t', end='')
+        for i in pell:
+            print(i, end=' ')
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un número entero!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo() # True / False

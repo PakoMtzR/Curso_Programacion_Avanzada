@@ -11,6 +11,10 @@ incluyendo a & b
 ----------------------------------------------------------
 '''
 
+from os import system
+import preguntar
+
+
 def suma_de_numeros_intermedios(lim_a:int, lim_b:int) -> int:
     suma_de_intermedios = 0     # Creamos una variable donde guardaremos la suma
     
@@ -29,8 +33,35 @@ def producto_de_numeros_intermedios(lim_a:int, lim_b:int) -> int:
     
     return producto_de_intermedios  # Retornamos el producto de todos los números intermedios
 
-x = suma_de_numeros_intermedios(4,6)
-y = producto_de_numeros_intermedios(4,6)
 
-print(x)
-print(y)
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------------')
+        print(' Programa 7: Ingresar un intervalo [a,b] y que obtenga tanto') 
+        print('             la suma como el producto de todos los números ')
+        print('             intermedios, incluyendo a & b')
+        print('----------------------------------------------------------\n')
+        a = int(input(' Ingrese el valor inicial: '))
+        b = int(input(' Ingrese el valor final: '))
+        print('\n')
+
+        suma = suma_de_numeros_intermedios(a, b)
+        producto = producto_de_numeros_intermedios(a, b)
+
+        print(f' La suma de los números en el intervalo de [{str(a)}, {str(b)}] = {suma}')
+        print(f' El producto de los números en el intervalo de [{str(a)}, {str(b)}] = {producto}')
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, tienes que ingresar un número entero!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo()
