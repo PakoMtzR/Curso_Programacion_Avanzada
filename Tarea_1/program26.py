@@ -36,6 +36,9 @@ A -> Es la cardinalidad de los caracteres con los que voy a trabajar (es la cant
         len(caracteres)
 ----------------------------------------------------------------------------------------
 '''
+from os import system
+import preguntar
+
 
 # Definimos una variable global el cual contenga los caracteres con los que vamos a trabajar
 caracteres = 'abcdefghijklmñnopqrstuvwxyzáéíóúABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ1234567890_-+,#$%&/()=¿?¡!|,.;:{}[] '
@@ -88,6 +91,44 @@ def desencriptar(mensaje_encriptado:str, key:int) -> str:
     return mensaje_desencriptado    # Mensaje desencriptado final
 
 
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('------------------------------------------')
+        print(' Programa 26: Cifrado de César')
+        print('------------------------------------------')
+        print(' 1) Encriptar un texto')
+        print(' 2) Desencriptar un texto')
+        print('------------------------------------------')
+        opcion = int(input(' Opcion: '))
+        while(opcion != 1 and opcion != 2):
+            opcion = int(input(' Opcion: '))
+        print('------------------------------------------')
+        texto = input(' Ingrese el texto: ')
+        key = int(input(' Ingrese la llave: '))
+
+        if opcion == 1:
+            texto_encriptado = encriptar(texto, key)
+            print('\n\t', texto_encriptado)
+        if opcion == 2:
+            texto_desencriptado = desencriptar(texto, key)
+            print('\n\t',texto_desencriptado)
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, sigue las instrucciones... menso')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo() # True / False
+
+'''
 mensaje = 'hola soy pakito'
 key = 8
 
@@ -95,3 +136,4 @@ mensaje_encriptado = encriptar(mensaje, key)
 
 print(f'   mensaje encriptado -> {mensaje_encriptado}')
 print(f'mensaje desencriptado -> {desencriptar(mensaje_encriptado, key)}')
+'''

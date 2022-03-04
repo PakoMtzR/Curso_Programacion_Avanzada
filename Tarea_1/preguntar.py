@@ -11,12 +11,12 @@ Solo retorna True o False
 ---------------------------------------------
 '''
 
-def quieres_volver_a_intentarlo() -> bool:
+def quieres_volver_a_intentarlo(mensaje = ' ¿Quieres volver a intentarlo? [s/n]: ') -> bool:
 
-    opcion = input(' ¿Quieres volver a intentarlo? [s/n]: ')
+    opcion = input(mensaje)
     
     while(opcion != 's' and opcion != 'n'):
-        opcion = input(' ¿Quieres volver a intentarlo? [s/n]: ')
+        opcion = input(mensaje)
     
     if opcion == 's':
         return True

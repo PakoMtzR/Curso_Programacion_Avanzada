@@ -43,14 +43,14 @@ while volver_a_intentar == True:
         system('cls')   # Limpiamos la consola
 
         print('----------------------------------------------------------')
-        print(' Programa 27: Convetir número a Romano')
+        print(' Programa 18: Convetir número a Romano')
         print('----------------------------------------------------------\n')
         numero = int(input(' Ingrese un número: '))
         print('\n')
 
         if numero < 0: numero *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
         
-        print(f' {str(numero)} --> {convertir_a_romano(numero)}')
+        print(f'\t {str(numero)} --> {convertir_a_romano(numero)}')
 
     except:
         print('\n')

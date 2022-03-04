@@ -23,7 +23,14 @@ def descomponer(num:int) -> None:
     for i, value in enumerate(num_str):
         factores.append(int(value)*(10**(len(num_str)-(i+1))))
 
-    print(factores)
+    print('\t', end='')
+    for i , value in enumerate(factores):
+        if i != 0:
+            print(' + ', end='')
+
+        print(str(value), end='')
+
+    print(f' = {str(num)}')
 
 
 # ---------------------------------------------------------------------------- #

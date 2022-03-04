@@ -17,8 +17,6 @@ import preguntar
 
 def calcular_doble_factorial(num:int) -> int:
     
-    #if num < 0: num *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
-
     dobleFactorial = 1
     
     # La formula del doble factorial de un número par es diferente que al de un número impar (consulte el link)
@@ -47,6 +45,8 @@ while volver_a_intentar == True:
         numero = int(input(' Ingrese un número: '))
         print('\n')
 
+        if numero < 0: numero *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
+        
         doble_factorial = calcular_doble_factorial(numero)
 
         print(f'\t {str(numero)}!! = {doble_factorial}')

@@ -73,6 +73,8 @@ while volver_a_intentar == True:
         numero = int(input(' Ingrese un número: '))
         print('\n')
 
+        if numero < 0: numero *= -1   # Si el número que ingreso es negativo, lo convertimos a positivo
+        
         verificar_si_es_un_numero_feliz(numero)
 
     except:

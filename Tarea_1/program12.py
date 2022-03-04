@@ -31,11 +31,11 @@ def cosa_rara() -> None:
 # ---------------------------------------------------------------------------- #
 system('cls')   # Limpiamos la consola
 
-print('----------------------------------------------------------')
+print('------------------------------------------------------------------')
 print(' Programa 12: Almacenar en una lista las letras del abecedario,') 
 print('              elimine de la lista las letras que ocupen las ')
 print('              posiciones múltiplos de 3 y muestre en pantalla ')
 print('              ambas listas, la original y la resultante')
-print('----------------------------------------------------------\n')
+print('------------------------------------------------------------------\n')
 
 cosa_rara()
