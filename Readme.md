@@ -1,5 +1,5 @@
 
-# Scripts de Python :snake: :computer: :flushed: :ok_hand:
+# Scripts de Python :snake: :computer:  
 ----
 ## Ejercicios (Tarea 1):
 
@@ -119,3 +119,108 @@
 <br>
 
 30. Generar un programa que permita al usuario ingresar una lista de entre 2 y 6 números enteros y mostrar todas las posibles permutaciones de la lista.
+<br>
+
+---
+## Ejercicios (Tarea 2):
+
+1. Programa que permita ingresar una función f(x) cualquiera y mediante el Método de bisección obtener una de las raíces de la función, por lo que en primer lugar se debe mostrar al usuario una gráfica que permita inducir el intervalo de valores [a, b] que debe ingresarse. El programa también debe mostrar y guardar en un archivo de texto (.txt) la tabla con los siguientes valores: |i a b xi	ε|, donde i es el número de iteración, a y b son los valores del intervalo, xi es el valor de la raíz calculado y ε el error. Finalmente se debe mostrar el valor de la raíz y la gráfica de la vecindad donde se localiza la raíz.
+[Metodo de Biseccion](http://test.cua.uam.mx/MN/Methods/Raices/Biseccion/Biseccion.php)
+<br>
+
+2. Programa que permita ingresar una función f(x) cualquiera y mediante el Método de Newton-Raphson obtener una de las raíces de la función, por lo que en primer lugar se debe mostrar al usuario una gráfica que permita inducir el valor incial x0 que debe ingresarse. El programa también debe mostrar y guardar en un archivo de texto (.txt) la tabla con los siguientes valores: |i xi	ε|, donde i es el número de iteración, xi es el valor de la raíz calculado y ε el error. Finalmente se debe mostrar el valor de la raíz y la gráfica de la vecindad donde se localiza la raíz.
+[Método de Newton-Raphson](http://test.cua.uam.mx/MN/Methods/Raices/NewtonRaphson/NewtonRaphson.php)
+<br>
+
+3. Programa que permita ingresar una función f(x) polinomial cualquiera y mediante el Método de Lin-Bairstow obtener todas las ráices de la función polinomial una de las raíces de la función, por lo que en primer lugar se deben introducir los valores r0 y s0 que debe ingresarse. El programa también debe mostrar y guardar en un archivo de texto (.txt) la tabla con los siguientes valores: |i ri	si	εr	εs|, donde i es el número de iteración, factores ri y si y los errores de los factores εr εs.
+[Método de Lin-Bairstow](http://metnum-utp01.blogspot.com/p/lin-bairstow.html)
+<br>
+
+4. Programa que permita ingresra una función y mediante el Método de Trapecios o Trapezoidal obtener la integral definida en el intervalo [a, b]El programa también debe mostrar y guardar en un archivo de texto (.txt) la tabla con los siguientes valores: |i h Valor_Integral ε|.
+[Método de Trapecios o Trapezoidal](http://test.cua.uam.mx/MN/Methods/Raices/NewtonRaphson/NewtonRaphson.php)
+<br>
+
+5. Programa que permita realizar la simulación del Camino o Paseo Aleatorio (Random Walk) o caminata del borracho (su profesor de programación) solicitando cuántos pasos (n) se efectuarán y de que longitud (L(), mostrando al finalizar la gráfica en 2D tras efectuar los n pasos.
+[Documento Disponible](https://www.dropbox.com/s/xbt4cps31zf3liv/Simulaci%C3%B3n%20del%20camino%20aleatorio.docx?dl=0)
+<br>
+
+6. Resolver el problema de que se impriman los N números de la Serie de Padovan , donde N es un número entero positivo que el usuario debe ingresar para obtener los valores de la serie, utilizando el paradigma de Programación Funcional (no debe utilizarse ningún otro paradigma).
+<br>
+
+7. Utilizando recursividad, generar un programa que calcule la suma harmónica de un número entero positivo N ingresado por el usuario.
+[Suma harmónica](https://es.wikipedia.org/wiki/Serie_arm%C3%B3nica_(matem%C3%A1tica))
+<br>
+
+8. Generar un programa que acepte una cadena de texto que representan una constraseña; el programa debe revisar que la contraseña sea válida, tomando en cuenta los siguientes criterios:
+
+        Debe contener al menos una letra minúscula [a-z]
+        Debe contener al menos un número [0-9]
+        Debe contener al menos una letra mayúscula [A-Z], no en la primera posición
+        Debe contener al menos un caracter especial [$, #, @, _]
+        Longitud mínima - máxima de la contraseña, 6-12 caracteres
+    Sólo hasta que se ingresa la contraseña correcta, el programa debe permitir continuar. Una vez que se ingrese una contraseña válida, el programa guardará la contraseña cifrada mediante el algoritmo César del grupo de ejercicios I (problema 26), seleccionando de manera aleatoria entre [0,20], el número de posiciones a mover, y guardando primero dicho número seguido de la contraseña en el archivo de texto (.txt). Este archivo debe irse actualizando con todas las contraseñas que se vayan ingresando en el programa
+<br>
+
+9. Generar un programa que simule la entrega de un a mano de cartas de la baraja inglesa (5 cartas en total) a dos jugadores (debe mostrarse las dos manos en la consola). Utilizar la programación orientada a objetos para resolver este programa 
+<br>
+
+10. Programa que permita cifrar un texto ingresado por medio del algoritmo RSA. Para este programa se debe de generar una función de cifrado y otra de descifrado, en donde la primera reciba una cadena de texto y almacene un archivo (.txt) con la cadena cifrada y lo necesario para descifrar, mientras que la función de descifrado debe recibir el archivo cifrado y obtener la cadena original, de ser posible utilizar los paradigmas de programación orientada a objetos y funcional.
+[Algoritmo RSA](https://elprofedefisica.naukas.com/2018/01/22/asi-funciona-el-algoritmo-rsa/)
+[un ejemplo del algoritmo](https://cs.uns.edu.ar/~ldm/mypage/data/ss/info/ejemplo-rsa.pdf)
+[otro ejemplo](https://paradacreativa.es/ejemplo-de-algoritmo-asimetrico-rsa/)
+[si... otro mas](https://juncotic.com/rsa-como-funciona-este-algoritmo/)
+<br>
+
+11. Programa que pemita obtener el RFC con homoclave de una persona, solicitando los datos necesarios (Nombre, Apellidos, Fecha de Nacimiento), siguiendo para ello las instrucciones proporcionadas por la SHCP ¿Cómo generar el RFC? utilizar, de ser posible, el paradigma de programación orientado a objetos.
+[¿Cómo generar el RFC? ](https://www.dropbox.com/s/knefl1rxxgu36wu/IFAI%200610100135506%20065%20Algoritmo%20para%20generar%20el%20RFC%20con%20homoclave%20para%20personas%20fisicas%20y%20morales.odt?dl=0)
+<br>
+
+12. Programa que permita obtener el CURP completo de una persona, solicitando los datos necesarios (Nombre, Apellidos, Fecha de Nacimiento, lugar de nacimiento), siguiendo para ello las instrucciones proporcionadas en el DOF Normativa para generar el CURP, DOF utilizar, de ser posible, el paradigma de programación orientado a objetos. Omitir los dos últimos dígitos asignados por el RENAPO.
+[DOF Normativa para generar el CURP](https://www.dof.gob.mx/nota_detalle.php?codigo=5526717&fecha=18/06/2018)
+<br>
+
+13. Generar un programa que mediante recursividad permita resolver el problema de las Torres de Hanoi, permitir que el usuario ingrese el número de discos que se deben de mover (cerrar el intervalo de 3 a 15 discos) y mostrar los movimientos que se deben de realizar (todo puede ser en texto, aunque, de ser posible, mostrar los discos y los movimientos).
+[Torres de Hanoi](https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i)
+<br>
+
+14. Programa que permita obtener diversas soluciones de el problema de las 8 reinas. El programa debe permitirle al usuario seleccionar la posición inicial de una de las reinas y de ahí mostrarle la(s) posible(s) solución(es).
+[Problema de las 8 reinas](https://es.wikipedia.org/wiki/Problema_de_las_ocho_reinas)
+<br>
+
+15. Programa que permita calcular n números de la serie de Fibonacci, con valores de n en el intervalo [1, 10000].
+<br>
+
+16. Generar un programa que lea de la internet el siguiente texto: Romeo and Juliet by William Shakesperare y obtenga la estadítica, junto con su respectivo histograma, del número de letras que aprecen en el texto (esto es cuantas a's, cuántas b's, cuántas c's y así sucesivamente). (piden aprender a hackear, veamos con esto si pueden dar sus primeros pasos).
+[Documento a Hackear :smiling_imp:](https://automatetheboringstuff.com/files/rj.txt)
+<br>
+
+17. Generar un programa que realice la simulación del juego de la vida propuesto por el matemático John Horton Conway en 1970 El juego de la vida. Este "juego" permite entender las interacciones entre depredadores y presas, crecimiento de virus, bacterias, hongos, crecimiento de tumores, movimientos económicos, etc... El programa debe generar una animación con el desarrollo del juego.
+[El juego de la vida](https://es.wikipedia.org/wiki/Juego_de_la_vida)
+<br>
+
+18. Realizar la simulación y animación de un péndulo simple, pidiendo al usuario los siguientes datos: Masa del péndulo, aceleración de la gravedad, Longitud del péndulo, constante de fricción viscosa. Usar algo como lo que se muestra en esta página del [Modelado y simulación del péndulo simple](http://isa.uniovi.es/wiki/isa/index.php/Modelado_y_Simulaci%C3%B3n_de_un_P%C3%A9ndulo).
+<br>
+
+19. Generar un programa que obtenga una señal de audio mediante el micrófono o un archivo de audio (mp3, wav, etc) y permitir al usuario seleccionar el intervalo de frecuencias que desea escuchar, esto es, aplicar un filtro en un cierto intervalo de frecuencias, permitir escuchar el resultado y guardar el resultado en un archivo.
+<br>
+
+20. Generar un programa que realice la simulación de un tiro parabólico para el cual se le ingresen los valores de la velocidad incial v0, el ángulo inicial θ0, la altura inicial de donde saldrá el proyectil h0 y la aceleración de la gravedad que afectará al proyectil, así como los pasos en el tiempo δt que se tomarán para realizar la simulación, la cual deberá detenerse cuando el proyectil llegue al suelo y = 0. Los datos de la simulación deben de guardarse a su vez en un archivo de texto (.txt) con formato de tabla |i x y t |, donde i es el paso, la posición en (x,y) y el tiempo t de vuelo del proyectil, considerar los siguientes casos:
+
+        Caso ideal, en donde el proyectil no se ve afectado por la fricción del aire, noni tampoco existen cambios en la densidad del aire o de la gravedad (caso estudiado por los libros de física)
+        Considerar que existe un componente de desaceleración debida a la fricción del proyectil con el aire, la cual esta dada por a_friccion = Coef_aer * 0.5 * rho * A * (vx^2 + vy^2)/masa*cos(angulo), donde:
+        Coef_aer -> coeficiente aerodinámico del proyectil
+        rho -> densidad del aire a nivel del mar
+        A -> Area transversal del proyectil
+        vx, vy -> velocidad en x,y del proyectil
+        masa -> masa del proyectil
+        angulo -> ángulo en el movimiento del proyectil
+        Tomar en cuenta estas cantidades que sean ingresadas por el usuario. Obtener la gráfica con este modelo
+        Considerar que existe un cambio en la densidad del aire en cuento el proyectil alcance alturas considerables. La densidad del aire cambia de acuerdo a la ecuación: rho = -0.0001031*y + 1.216, donde y es la altura del proyectil y rho la densidad del aire
+        Finalmente, para que el modelo sea aún más completo, la aceleración de la gravedad también se ve modificada de acuerdo con la altura (entre más alejado este un objeto, experimentará menor gravedad), lo cual está modelado mediante la ecuación g = g0 * (r/(r+y))^2, donde:
+        g0 -> gravedad a nivel del mar (9.80655 m/s^2)
+        r -> radio de la tierra
+    Comparar las gráficas de todos los casos. De ser posible, generar la animación de como se mueve el objeto en cada caso. 
+<br>
+
+21. Utilizando la librería PYAUTOGUI, generar una buena broma (conocidas como prank) en la que el programa de Python tome el control ya sea del ratón o del teclado o de ambos, para confundir al usuario... (Este será calificado como los deportes de apreciación, clavados, patinaje artístico, gimnasia, entre más mejor la broma, más calificación se obtendrá =P) si en algún punto de su existencia toman como interesante el usar FORMAT C:, pues, consideren ser pasado por la guillotinización =D.
+<br>
