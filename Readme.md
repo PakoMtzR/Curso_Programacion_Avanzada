@@ -1,5 +1,5 @@
 
-# Scripts de Python :snake: :computer:  
+# Scripts de Python :snake: :computer: :flushed: :ok_hand: 
 ----
 ## Ejercicios (Tarea 1):
 

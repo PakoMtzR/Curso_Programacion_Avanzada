@@ -41,7 +41,7 @@ import preguntar
 
 
 # Definimos una variable global el cual contenga los caracteres con los que vamos a trabajar
-caracteres = 'abcdefghijklmñnopqrstuvwxyzáéíóúABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ1234567890_-+,#$%&/()=¿?¡!|,.;:{}[] '
+caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890|°¬!"#$%&/\()=?¿@*+~{}[^`],;.:-_\'<> '
 
 def encriptar(mensaje:str, key:int) -> str:
     
