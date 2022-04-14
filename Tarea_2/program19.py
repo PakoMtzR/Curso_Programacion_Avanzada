@@ -9,3 +9,32 @@ Problema:
 Fuentes: 
 ---------------------------------------------------------------
 '''
+import pyaudio
+import numpy as np
+from time import sleep
+
+p = pyaudio.PyAudio()
+
+CHANNELS = 1
+RATE = 44100
+
+def callback(in_data, frame_count, time_info, flag):
+    audio_data = np.fromstring(in_data, dtype=np.float32)
+    x = np.linspace(0, np.pi*2, audio_data.shape[0])
+    funamental = np.cos(10*x)
+    audio_data *= funamental
+
+    return audio_data.astype(np.float32), pyaudio.paContinue
+
+stream = p.open(
+    format=pyaudio.paFloat32,
+    channels=CHANNELS,
+    rate=RATE,
+    output=True,
+    input=True,
+    stream_callback=callback,
+)
+
+stream.start_stream()
+sleep(30)
+stream.close()
