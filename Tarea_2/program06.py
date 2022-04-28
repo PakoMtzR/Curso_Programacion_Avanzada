@@ -13,7 +13,6 @@ Problema: Resolver el problema de que se impriman los N números
 Fuentes: https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Padovan
 ---------------------------------------------------------------
 '''
-
 from os import system
 import preguntar
 
@@ -49,7 +48,7 @@ while volver_a_intentar == True:
         system('cls')   # Limpiamos la consola
 
         print('----------------------------------------------------------')
-        print(' Programa 13: Serie de Padovan')
+        print(' Programa 06: Serie de Padovan')
         print('----------------------------------------------------------\n')
         numero_de_elementos = int(input(' Ingrese el número de elementos de la serie: '))
         print('\n')

@@ -15,6 +15,8 @@ dígitos asignados por el RENAPO
 Fuentes: https://www.dof.gob.mx/nota_detalle.php?codigo=5526717&fecha=18/06/2018
 ---------------------------------------------------------------
 '''
+from os import system
+import preguntar
 
 vocales = ('A', 'E', 'I', 'O', 'U')
 estados = {
@@ -93,5 +95,36 @@ class Persona():
         self.curp = self.rfc + self.sexo + self.estado + primera_consonante_interna(self.apellido_paterno) + primera_consonante_interna(self.apellido_materno) + primera_consonante_interna(self.nombre)
 
 
-x = Persona('francisco', 'martinez', 'rivas', 2001, 10, 5, 'H', 'Nuevo Leon')
-print(x.curp)
+
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------')
+        print(' Programa 12: Generador de CURP')
+        print('----------------------------------------------------------\n')
+        nombre = input('Ingrese su nombre: ')
+        apellido_paterno = input('Ingrese su apellido paterno: ')
+        apellido_materno = input('Ingrese su apellido materno: ')
+        anno = input('Ingrese su año de nacimiento (####): ')
+        mes = input('Ingrese su mes de nacimiento (formato numerico ##): ')
+        dia = input('Ingrese su dia de nacimiento (##): ')
+        sexo = input('Indique su sexo [H/M]: ')
+        estado = input('Ingrese su estado natal (sin acentos): ')
+
+        ciudadano = Persona(nombre, apellido_paterno, apellido_materno, anno, mes, dia, sexo, estado)
+        print('\n' + 'CURP --> ' + ciudadano.curp)
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, sigue las instrucciones... menso!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo() # True / False
+

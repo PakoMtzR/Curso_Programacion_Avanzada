@@ -15,6 +15,9 @@ Fuentes: https://www.dropbox.com/s/knefl1rxxgu36wu/IFAI%200610100135506%20065%20
 ---------------------------------------------------------------
 '''
 
+from os import system
+import preguntar
+
 tabla1 = {
     ' ' : '00', '0' : '00', '1' : '01', '2' : '02', '3' : '03', '4' : '04', 
     '5' : '05', '6' : '06', '7' : '07', '8' : '08', '9' : '09', '&' : '10',
@@ -89,10 +92,41 @@ class Persona():
                     self.mes + \
                     self.dia + \
                     generar_homoclave(self.nombre_completo)
-                
 
 
-x = Persona('emma', 'gomez', 'diaz', 2001, 10, 5)
-print(x.rfc)
+# ---------------------------------------------------------------------------- #
+#                                Programa Principal
+# ---------------------------------------------------------------------------- #
+volver_a_intentar = True
+
+while volver_a_intentar == True:
+    try:
+        system('cls')   # Limpiamos la consola
+
+        print('----------------------------------------------------------')
+        print(' Programa 11: Generador de RFC')
+        print('----------------------------------------------------------\n')
+        nombre = input('Ingrese su nombre: ')
+        apellido_paterno = input('Ingrese su apellido paterno: ')
+        apellido_materno = input('Ingrese su apellido materno: ')
+        anno = input('Ingrese su año de nacimiento (####): ')
+        mes = input('Ingrese su mes de nacimiento (formato numerico ##): ')
+        dia = input('Ingrese su dia de nacimiento (##): ')
+
+        x = Persona(nombre, apellido_paterno, apellido_materno, anno, mes, dia)
+        print('\n' + 'RFC --> ' + x.rfc)
+
+    except:
+        print('\n')
+        print(' ¿Tas tonto o qué?, sigue las instrucciones... menso!!!')
+
+    finally:
+        print('\n')
+        volver_a_intentar = preguntar.quieres_volver_a_intentarlo() # True / False
+
+
+
+
+
 
 

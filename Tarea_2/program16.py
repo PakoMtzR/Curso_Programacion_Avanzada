@@ -37,7 +37,7 @@ for i, value in enumerate(abecedario):
     print(f' {value} ---> {contadores[i]}')
 
 # Generamos el histograma o la grafica de barras del paso anterior
-plot.bar(list(abecedario), contadores)
+plot.bar(list(abecedario), contadores)  # En el eje x ponemos los caracteres y en el eje y las veces que aparecen
 plot.title('Letras en el texto')
 plot.xlabel('Caracteres')
 plot.ylabel('# de veces que aparecen')

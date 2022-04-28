@@ -4,7 +4,12 @@ Fecha de creacion: 17/03/2022
 autor: PakoMtz 
  
 ---------------------------------------------------------------
-Problema:
+Problema: Generar un programa que obtenga una señal de audio 
+mediante el micrófono o un archivo de audio (mp3, wav, etc) 
+y permitir al usuario seleccionar el intervalo de frecuencias 
+que desea escuchar, esto es, aplicar un filtro en un cierto 
+intervalo de frecuencias, permitir escuchar el resultado y 
+guardar el resultado en un archivo
 
 Fuentes: 
 ---------------------------------------------------------------

@@ -13,13 +13,12 @@ Fuentes: https://es.wikipedia.org/wiki/Juego_de_la_vida
 '''
 
 import pygame
-#from pygame.locals import *
 import numpy as np
 from time import sleep
 
 # Iniciamos una ventana de pygame
 pygame.init()
-pygame.display.set_caption('El juego de la vida :D')
+pygame.display.set_caption('El juego de la vida :D  ( Presiona cualquier tecla para pausar )')
 width, height = 750, 750 # ancho y largo de 750x750 px
 screen = pygame.display.set_mode((height, width))
 background = 25, 25, 25     # color de fondo
@@ -48,9 +47,9 @@ while True:
         if evento.type == pygame.KEYDOWN:
             pauseExect = not pauseExect
             if pauseExect == True:
-                pygame.display.set_caption('El juego de la vida :D (pausa)')
+                pygame.display.set_caption('El juego de la vida :D ( Juego en pausa, presiona cualquier tecla para reanudar )')
             else:
-                pygame.display.set_caption('El juego de la vida :D')
+                pygame.display.set_caption('El juego de la vida :D  ( Presiona cualquier tecla para pausar )')
         
         # Evaluamos si el han dado clic con el mouse
         mouse_click = pygame.mouse.get_pressed()
@@ -102,7 +101,7 @@ while True:
     gameState = np.copy(new_gameState) 
     pygame.display.flip()
 
-pygame.quit()    
+#pygame.quit()    
     
     
     

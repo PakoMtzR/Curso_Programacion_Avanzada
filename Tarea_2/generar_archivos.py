@@ -9,7 +9,7 @@ for i in range(1,22):
     else:
         num = str(i)
     
-    file = open('D:/UPIIH/4_Semestre/Programacion_Avanzada/Tarea_2/program{0}.py'.format(num), 'w')
+    file = open(os.path.dirname(os.path.abspath(__file__)) + '/program{0}.py'.format(num), 'w')
     file.write("'''\n")
     file.write('# -*- coding: utf-8 -*-\n')
     file.write('Fecha de creacion: 17/03/2022\n')
