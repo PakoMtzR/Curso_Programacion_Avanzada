@@ -21,6 +21,9 @@ import matplotlib.pyplot as plt # Importar módulo para graficación
 import numpy as np  # Importar módulo para el uso de arreglos numéricos
 import sympy as sp  # Importar módulo para el uso de matemáticas simbólicas
 
+print('----------------------------------------------------------')
+print(' Programa 01: Metodo de Biseccion')
+print('----------------------------------------------------------\n')
 
 # Ingresa la variable y verificamos si es correcta
 while True:
