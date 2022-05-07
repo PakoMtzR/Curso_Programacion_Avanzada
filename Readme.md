@@ -8,9 +8,6 @@
     </p>
 </div>
 
-<!-- https://logodownload.org/wp-content/uploads/2019/10/python-logo-1.png
--->
-
 ## Ejercicios (Tarea 1):
 
 1. Programa que indique si al ingresar un número entero positivo N, este es par o impar (tomar en consideración la restricción de que solo permita ingresar un número entero y positivo, esta restricción debe de incluirse en los ejercicios donde sea necesaria).
