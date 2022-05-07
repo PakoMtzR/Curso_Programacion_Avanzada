@@ -4,7 +4,7 @@
 
 <div>
     <p style = 'text-align:center;'>
-        <img src="http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" width="30%">
+        <img src="https://logodownload.org/wp-content/uploads/2019/10/python-logo-1.png" width="50%">
     </p>
 </div>
 
