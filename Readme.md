@@ -1,6 +1,13 @@
 
 # Scripts de Python :snake: :computer: :flushed: :ok_hand: 
 ----
+
+<div>
+   <p style = 'text-align:center;'>
+      <img src="https://img2.freepng.es/20180715/phb/kisspng-python-javascript-logo-clojure-python-logo-download-5b4ba705f356d3.4338622815316846139967.jpg" width="30%">
+   </p>
+</div>
+
 ## Ejercicios (Tarea 1):
 
 1. Programa que indique si al ingresar un número entero positivo N, este es par o impar (tomar en consideración la restricción de que solo permita ingresar un número entero y positivo, esta restricción debe de incluirse en los ejercicios donde sea necesaria).
