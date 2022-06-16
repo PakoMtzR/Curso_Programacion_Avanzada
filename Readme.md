@@ -8,6 +8,7 @@
     </p>
 </div>
 
+:x: --> incompleto
 ## Ejercicios (Tarea 1):
 
 1. Programa que indique si al ingresar un número entero positivo N, este es par o impar (tomar en consideración la restricción de que solo permita ingresar un número entero y positivo, esta restricción debe de incluirse en los ejercicios donde sea necesaria).
@@ -139,7 +140,7 @@
 [Método de Newton-Raphson](http://test.cua.uam.mx/MN/Methods/Raices/NewtonRaphson/NewtonRaphson.php)
 <br>
 
-3. Programa que permita ingresar una función f(x) polinomial cualquiera y mediante el Método de Lin-Bairstow obtener todas las ráices de la función polinomial una de las raíces de la función, por lo que en primer lugar se deben introducir los valores r0 y s0 que debe ingresarse. El programa también debe mostrar y guardar en un archivo de texto (.txt) la tabla con los siguientes valores: |i ri	si	εr	εs|, donde i es el número de iteración, factores ri y si y los errores de los factores εr εs.
+3. :x: Programa que permita ingresar una función f(x) polinomial cualquiera y mediante el Método de Lin-Bairstow obtener todas las ráices de la función polinomial una de las raíces de la función, por lo que en primer lugar se deben introducir los valores r0 y s0 que debe ingresarse. El programa también debe mostrar y guardar en un archivo de texto (.txt) la tabla con los siguientes valores: |i ri	si	εr	εs|, donde i es el número de iteración, factores ri y si y los errores de los factores εr εs.
 [Método de Lin-Bairstow](http://metnum-utp01.blogspot.com/p/lin-bairstow.html)
 <br>
 
@@ -147,7 +148,7 @@
 [Método de Trapecios o Trapezoidal](http://test.cua.uam.mx/MN/Methods/Raices/NewtonRaphson/NewtonRaphson.php)
 <br>
 
-5. Programa que permita realizar la simulación del Camino o Paseo Aleatorio (Random Walk) o caminata del borracho (su profesor de programación) solicitando cuántos pasos (n) se efectuarán y de que longitud (L(), mostrando al finalizar la gráfica en 2D tras efectuar los n pasos.
+5. :x: Programa que permita realizar la simulación del Camino o Paseo Aleatorio (Random Walk) o caminata del borracho (su profesor de programación) solicitando cuántos pasos (n) se efectuarán y de que longitud (L(), mostrando al finalizar la gráfica en 2D tras efectuar los n pasos.
 [Documento Disponible](https://www.dropbox.com/s/xbt4cps31zf3liv/Simulaci%C3%B3n%20del%20camino%20aleatorio.docx?dl=0)
 <br>
 
@@ -171,7 +172,7 @@
 9. Generar un programa que simule la entrega de un a mano de cartas de la baraja inglesa (5 cartas en total) a dos jugadores (debe mostrarse las dos manos en la consola). Utilizar la programación orientada a objetos para resolver este programa 
 <br>
 
-10. Programa que permita cifrar un texto ingresado por medio del algoritmo RSA. Para este programa se debe de generar una función de cifrado y otra de descifrado, en donde la primera reciba una cadena de texto y almacene un archivo (.txt) con la cadena cifrada y lo necesario para descifrar, mientras que la función de descifrado debe recibir el archivo cifrado y obtener la cadena original, de ser posible utilizar los paradigmas de programación orientada a objetos y funcional.
+10. :x: Programa que permita cifrar un texto ingresado por medio del algoritmo RSA. Para este programa se debe de generar una función de cifrado y otra de descifrado, en donde la primera reciba una cadena de texto y almacene un archivo (.txt) con la cadena cifrada y lo necesario para descifrar, mientras que la función de descifrado debe recibir el archivo cifrado y obtener la cadena original, de ser posible utilizar los paradigmas de programación orientada a objetos y funcional.
 [Algoritmo RSA](https://elprofedefisica.naukas.com/2018/01/22/asi-funciona-el-algoritmo-rsa/)
 [un ejemplo del algoritmo](https://cs.uns.edu.ar/~ldm/mypage/data/ss/info/ejemplo-rsa.pdf)
 [otro ejemplo](https://paradacreativa.es/ejemplo-de-algoritmo-asimetrico-rsa/)
@@ -190,7 +191,7 @@
 [Torres de Hanoi](https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i)
 <br>
 
-14. Programa que permita obtener diversas soluciones de el problema de las 8 reinas. El programa debe permitirle al usuario seleccionar la posición inicial de una de las reinas y de ahí mostrarle la(s) posible(s) solución(es).
+14. :x: Programa que permita obtener diversas soluciones de el problema de las 8 reinas. El programa debe permitirle al usuario seleccionar la posición inicial de una de las reinas y de ahí mostrarle la(s) posible(s) solución(es).
 [Problema de las 8 reinas](https://es.wikipedia.org/wiki/Problema_de_las_ocho_reinas)
 <br>
 
@@ -208,7 +209,7 @@
 18. Realizar la simulación y animación de un péndulo simple, pidiendo al usuario los siguientes datos: Masa del péndulo, aceleración de la gravedad, Longitud del péndulo, constante de fricción viscosa. Usar algo como lo que se muestra en esta página del [Modelado y simulación del péndulo simple](http://isa.uniovi.es/wiki/isa/index.php/Modelado_y_Simulaci%C3%B3n_de_un_P%C3%A9ndulo).
 <br>
 
-19. Generar un programa que obtenga una señal de audio mediante el micrófono o un archivo de audio (mp3, wav, etc) y permitir al usuario seleccionar el intervalo de frecuencias que desea escuchar, esto es, aplicar un filtro en un cierto intervalo de frecuencias, permitir escuchar el resultado y guardar el resultado en un archivo.
+19. :x: Generar un programa que obtenga una señal de audio mediante el micrófono o un archivo de audio (mp3, wav, etc) y permitir al usuario seleccionar el intervalo de frecuencias que desea escuchar, esto es, aplicar un filtro en un cierto intervalo de frecuencias, permitir escuchar el resultado y guardar el resultado en un archivo.
 <br>
 
 20. Generar un programa que realice la simulación de un tiro parabólico para el cual se le ingresen los valores de la velocidad incial v0, el ángulo inicial θ0, la altura inicial de donde saldrá el proyectil h0 y la aceleración de la gravedad que afectará al proyectil, así como los pasos en el tiempo δt que se tomarán para realizar la simulación, la cual deberá detenerse cuando el proyectil llegue al suelo y = 0. Los datos de la simulación deben de guardarse a su vez en un archivo de texto (.txt) con formato de tabla |i x y t |, donde i es el paso, la posición en (x,y) y el tiempo t de vuelo del proyectil, considerar los siguientes casos:
